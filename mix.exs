@@ -4,10 +4,13 @@ defmodule GerryCipher.MixProject do
   def project do
     [
       app: :gerry_cipher,
+      description: description(),
       version: "0.1.0",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/jdsteinhauser/gerry_cipher"}
     ]
   end
 
@@ -17,6 +20,8 @@ defmodule GerryCipher.MixProject do
       extra_applications: [:logger]
     ]
   end
+
+  def description, do: "Encoding based on Ugly Gerry typeface"
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
